@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+body {
+    background-color: #14213D;
+}
+
+.heading {
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    align-items: center;
+}
+
+.head {
+    margin-left: 7px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    display: block;
+    color: #ffffff;
+}
+
+.iconOpen {
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff86;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 7px;
+    backdrop-filter: blur(20px);
+    transition: 0.5s;
+    left: 0;
+    opacity: 1;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu.close {
+    left: -100%;
+    opacity: 0;
+}
+
+.menu.close .btnText {
+    left: -100%;
+}
+
+.btn {
+    display: flex;
+    font-size: 1.5em;
+    margin: 5px 0;
+    text-transform: uppercase;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.btnText {
+    width: 100%;
+    height: auto;
+    margin-left: 40px;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.sejarah {
+    padding: 5px 10px;
+    width: 100%;
+    height: auto;
+    color: #ffffff;
+}
+
+.sejarah h3 {
+    font-size: 1.2em;
+}
+
+.sejarah p {
+    font-size: 0.9em;
+    font-weight: 300;
+    margin-top: 3px;
+}
+
+.sejarah a {
+    font-weight: 400;
+    text-decoration: none;
+    color: #FCA311;
+}
+
+.all {
+    width: 100%;
+    height: auto;
+    padding: 15px 10px;
+    border-radius: 20px 20px 0 0;
+    background-color: #e5e5e5;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.anotherMenu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.anotherMenu a {
+    text-decoration: none;
+    margin: 2px 5px;
+}
+
+.anotherMenu h3 {
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 0.9em;
+}
+
+.kejuruan ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.kejuruan a {
+    margin: 5px;
+}
+
+.kejuruan li {
+    border-radius: 8px;
+    width: 85px;
+    height: 90px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 6px #0000003b;
+}
+
+.kejuruan img {
+    height: 85%;
+}
+
+.beritaSlide {
+    width: 100%;
+    height: 30vh;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 6px #0000003b;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider {
+    width: 100%;
+    height: 30.8vh;
+    border-radius: 8px;
+}
+
+.slides {
+    width: 500%;
+    height: 30.8vh;
+    display: flex;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.imgSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30.8vh;
+}
+
+.imgSlide img {
+    width: 100%;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: none;
+}
+
+.navigation-auto div {
+    border: 2px solid rgb(211, 211, 211);
+    background: rgb(211, 211, 211);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 30px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    border: 2px solid rgb(0, 255, 255);
+    background: rgb(0, 255, 255);
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    border: 2px solid rgb(0, 255, 255);
+    background: rgb(0, 255, 255);
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    border: 2px solid rgb(0, 255, 255);
+    background: rgb(0, 255, 255);
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    border: 2px solid rgb(0, 255, 255);
+    background: rgb(0, 255, 255);
+}
+
+.berita {
+    margin-top: 10px;
+    width: 100%;
+    height: 50vh;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 6px #0000003b;
+    overflow-y: auto;
+}
+
+.berita a {
+    text-decoration: none;
+}
+
+.card {
+    background-color: #14213D;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 4px;
+}
+
+.imgBerita {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.imgBerita img {
+    width: 100%;
+}
+
+.judulBerita {
+    color: #ffffff;
+    width: 40vh;
+    height: auto;
+    margin-top: 4px;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    letter-spacing: 1px;
+}

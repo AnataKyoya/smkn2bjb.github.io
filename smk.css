@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+body {
+    background-color: #14213D;
+}
+
+.heading {
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    align-items: center;
+}
+
+.head {
+    margin-left: 7px;
+    font-size: 2em;
+    text-transform: uppercase;
+    display: block;
+    color: #ffffff;
+    padding: 5px 0;
+}
+
+.logo {
+    width: 93%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconOpen {
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    width: 35%;
+    height: 100%;
+    background-color: #ffffff86;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+    backdrop-filter: blur(20px);
+    transition: 0.5s;
+    left: 0;
+    opacity: 1;
+    border-radius: 0 15px 15px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu.close {
+    left: -100%;
+    opacity: 0;
+}
+
+.menu.close .btnText {
+    left: -100%;
+}
+
+.btn {
+    display: flex;
+    font-size: 1.5em;
+    margin: 5px 0;
+    text-transform: uppercase;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.btnText {
+    width: 100%;
+    height: auto;
+    margin-left: 60px;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.sejarah {
+    padding: 15px 15px;
+    width: 75%;
+    height: auto;
+    color: #ffffff;
+    margin: 0 auto;
+}
+
+.headSejarah {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgLogo {
+    width: auto;
+    height: 30vh;
+    margin-bottom: 5px;
+}
+
+.imgLogo img {
+    height: 100%;
+}
+
+.sejarah h3 {
+    font-size: 2em;
+}
+
+.sejarah p {
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-top: 3px;
+}
+
+.sejarah a {
+    font-weight: 400;
+    text-decoration: none;
+    color: #FCA311;
+}
+
+.all {
+    width: 100%;
+    height: auto;
+    padding: 15px 50px;
+    border-radius: 20px 20px 0 0;
+    background-color: #e5e5e5;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.anotherMenu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.anotherMenu a {
+    text-decoration: none;
+    margin: 2px 8px;
+}
+
+.anotherMenu h3 {
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.kejuruan ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.kejuruan a {
+    margin: 10px 25px;
+}
+
+.kejuruan li {
+    border-radius: 10px;
+    width: 21vh;
+    height: 25vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 6px #0000003b;
+}
+
+.kejuruan img {
+    height: 80%;
+}
+
+.beritaFlex {
+    display: flex;
+}
+
+.beritaSlide {
+    width: 100%;
+    height: 25vw;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 6px #0000003b;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider {
+    width: 100%;
+    height: 30.8vh;
+    border-radius: 8px;
+}
+
+.slides {
+    width: 500%;
+    height: 30.8vh;
+    display: flex;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.imgSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30.8vh;
+}
+
+.imgSlide img {
+    width: 100%;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: none;
+}
+
+.navigation-auto div {
+    border: 2px solid rgb(211, 211, 211);
+    background: rgb(211, 211, 211);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 30px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    border: 2px solid rgb(0, 255, 255);
+    background: rgb(0, 255, 255);
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    border: 2px solid rgb(0, 255, 255);
+    background: rgb(0, 255, 255);
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    border: 2px solid rgb(0, 255, 255);
+    background: rgb(0, 255, 255);
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    border: 2px solid rgb(0, 255, 255);
+    background: rgb(0, 255, 255);
+}
+
+.berita {
+    margin-left: 5px;
+    width: 100%;
+    height: 25vw;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 6px #0000003b;
+    overflow-y: auto;
+}
+
+.berita a {
+    text-decoration: none;
+}
+
+.card {
+    background-color: #14213D;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.imgBerita {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.imgBerita img {
+    width: 100%;
+}
+
+.judulBerita {
+    color: #ffffff;
+    width: 100%;
+    height: auto;
+    margin-top: 6px;
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+}
+
+@media (max-width: 1024px) {
+    .kejuruan a {
+        margin: 10px 20px;
+    }
+
+    .berita {
+        margin-left: inherit;
+        margin-top: 10px;
+        height: 70vh;
+    }
+
+    .beritaSlide {
+        height: 45vw;
+    }
+
+    .beritaFlex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        width: 45%;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .btn {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 867px) {
+    .kejuruan a {
+        margin: 10px 4px;
+    }
+
+    .berita {
+        margin-left: inherit;
+        margin-top: 10px;
+        height: 70vh;
+    }
+
+    .all {
+        padding: 15px 10px;
+    }
+
+    .head {
+        font-size: 1.8em;
+    }
+
+    .card {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 690px) {
+    .btn {
+        font-size: 1.3em;
+    }
+
+    .imgLogo {
+        height: 20vw;
+    }
+
+    .head {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .sejarah h3 {
+        font-size: 1.6em;
+    }
+
+    .sejarah p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 625px) {
+    .menu {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 515px) {
+    .judulBerita {
+        font-size: 1.1em;
+    }
+
+    .anotherMenu a {
+        text-decoration: none;
+        margin: 2px 5px;
+    }
+
+    .anotherMenu h3 {
+        font-size: 1.1em;
+    }
+
+    .footer {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 425px) {
+    .imgLogo {
+        display: none;
+    }
+
+    .sejarah {
+        padding: 5px 15px;
+        width: 100%;
+        margin: none;
+    }
+
+    .sejarah h3 {
+        font-size: 1.5em;
+    }
+
+    .sejarah p {
+        font-size: 0.9em;
+    }
+
+    .anotherMenu h3 {
+        font-size: 1em;
+    }
+
+    .footer {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 395px) {
+    .imgLogo {
+        display: none;
+    }
+
+    .headSejarah {
+        justify-content: inherit;
+        align-items: inherit;
+    }
+
+    .sejarah h3 {
+        font-size: 1.2em;
+    }
+
+    .sejarah p {
+        font-size: 0.9em;
+    }
+
+    .anotherMenu h3 {
+        font-size: 0.9em;
+    }
+
+    .head {
+        font-size: 1.1em;
+    }
+
+    .kejuruan a {
+        margin: 5px;
+    }
+
+    .kejuruan li {
+        border-radius: 8px;
+        width: 85px;
+        height: 90px;
+    }
+
+    .kejuruan img {
+        height: 85%;
+    }
+
+    .judulBerita {
+        font-size: 0.9em;
+    }
+}
